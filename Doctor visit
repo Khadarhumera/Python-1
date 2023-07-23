@@ -1,0 +1,27 @@
+class DoctorVisit:
+    def __init__(self, patient_name, visit_date, symptoms, prescription):
+        self.patient_name = patient_name
+        self.visit_date = visit_date
+        self.symptoms = symptoms
+        self.prescription = prescription
+
+def main():
+    visits = []  # List to store doctor visit objects
+
+    # Sample data - you can replace this with data from a file or database
+    visits.append(DoctorVisit("John Doe", "2023-07-21", "Fever, Headache", "Ibuprofen"))
+    visits.append(DoctorVisit("Jane Smith", "2023-07-22", "Cough, Sore throat", "Cough syrup"))
+    visits.append(DoctorVisit("Bob Johnson", "2023-07-23", "Back pain", "Muscle relaxants"))
+
+    # Output doctor visit analysis
+    print("Doctor Visit Analysis:")
+    print("-----------------------------------------------------")
+    for visit in visits:
+        print(f"Patient Name: {visit.patient_name}")
+        print(f"Visit Date: {visit.visit_date}")
+        print(f"Symptoms: {visit.symptoms}")
+        print(f"Prescription: {visit.prescription}")
+        print("-----------------------------------------------------")
+
+if __name__ == "__main__":
+    main()
